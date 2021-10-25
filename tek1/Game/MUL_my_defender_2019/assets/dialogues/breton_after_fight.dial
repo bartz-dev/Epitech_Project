@@ -1,0 +1,17 @@
+{
+    "default": "after_fight",
+    "after_fight": {
+        "lines": [
+            {
+                "name": "Breton",
+                "text": "En meme temps, tu m'as prit par surprise,
+t'es vraiment qu'un sale tricheur."
+            },
+            {
+                "name": "Breton",
+                "text": "Tu me degoute, ne reviens pas, prends tes affaires,
+rentre chez toi"
+            }
+        ]
+    }
+}

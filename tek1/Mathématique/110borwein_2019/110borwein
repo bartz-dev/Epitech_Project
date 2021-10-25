@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+##
+## EPITECH PROJECT, 2019
+## 110borwein_2019
+## File description:
+## 110borwein
+##
+
+import sys
+from calculator import call_all_functions
+
+def check_n():
+    try:
+        arg = int(sys.argv[1])
+        if int(sys.argv[1]) < 0:
+            print("Error : n must be a positive integer")
+            sys.exit(84)
+    except ValueError:
+        print("Please check your argument, or see -h")
+        sys.exit(84)
+    return arg
+
+def main():
+
+    if "-h" in sys.argv or "--help" in sys.argv:
+        print("USAGE\n    ./110borwein n\n\nDESCRIPTION")
+        print("    n    constant defining the integral to be computed")
+        sys.exit(0)
+    if len(sys.argv) == 1 or len(sys.argv) > 2:
+        print("Error: Not enough or too many arguments. Please see -h")
+        exit(84)
+    n = check_n()
+    call_all_functions(n)
+
+if __name__ == '__main__':
+    main()

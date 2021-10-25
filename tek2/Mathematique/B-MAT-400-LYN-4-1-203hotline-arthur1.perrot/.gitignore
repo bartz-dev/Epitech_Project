@@ -1,0 +1,4 @@
+.vscode/
+.pycache/
+a.out
+__pycache__

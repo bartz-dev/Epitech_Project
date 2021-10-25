@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+##
+## EPITECH PROJECT, 2019
+## 105torus_2019
+## File description:
+## Clement Fleur | Arthur Perrot
+##
+
+import math
+import sys
+
+def basic_function(x):
+    a0 = sys.argv[2]
+    a1 = sys.argv[3]
+    a2 = sys.argv[4]
+    a3 = sys.argv[5]
+    a4 = sys.argv[6]
+    f =  (a4 * pow(x, 4)) + (a3 * pow(x, 3)) + (a2 * pow(x, 2))
+    f = f + (a1 * pow(x, 1)) + a0
+    return (f)
+
+def help():
+    print("USAGE")
+    print("    ./105torus opt a0 a1 a2 a3 a4 n\n")
+    print("DESCRIPTION")
+    print("   opt             method option:")
+    print("                        1 for the bisection method")
+    print("                        2 for Newton's method")
+    print("                        3 for the secant method")
+    print("   a[0-4]          coefficients of the equation")
+    print("   n              precision (the application of the", end="")
+    print("polynomial to the solution shoud be smaller than 10^-n)")
+
+def main():
+    x = 0
+
+    if len(sys.argv) == 2 and (sys.argv[1] == "-h"):
+        help()
+        sys.exit(84)
+    if (len(sys.argv) != 8):
+        print("Please check your arguments, or see ./105torus -h for help")
+        sys.exit(84)
+    print(basic_function(x))
+
+if __name__ == "__main__":
+    main()

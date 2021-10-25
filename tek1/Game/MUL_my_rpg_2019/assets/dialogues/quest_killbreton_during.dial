@@ -1,0 +1,14 @@
+{
+    "default": "part1",
+    "part1": {
+        "lines": [
+            {
+                "name": "Henric",
+                "text": "Aller ! Il faut vite demonter ce fichu meuble!",
+                "choices": []
+            }
+        ],
+        "quests": [],
+        "rewards": []
+    }
+}

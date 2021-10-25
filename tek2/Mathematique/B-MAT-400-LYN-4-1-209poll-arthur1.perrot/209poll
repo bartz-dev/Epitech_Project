@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+##
+## EPITECH PROJECT, 2020
+## B-MAT-400-LYN-4-1-206neutrinos-clement.fleur [WSL: Debian]
+## File description:
+## 203
+##
+
+import sys
+from math import factorial, sqrt, exp, pi
+
+def printHelp():
+    print("USAGE\n    ./209poll pSize sSize p\n\nDESCRIPTION")
+    print("    pSize\t\tsize of the population")
+    print("    sSize\t\tsize of the sample (supposed to be representative)")
+    print("    p\t\t\tpercentage of voting intentions for a specific candidate")
+    sys.exit(0)
+
+def errorHandling():
+    if (len(sys.argv) <= 3):
+        print("Error : Please check your arguments.")
+        sys.exit(84)
+    if sys.argv[1] == "-h":
+        printHelp()
+    try:
+        float(sys.argv[1])
+        float(sys.argv[2])
+        float(sys.argv[3])
+    except:
+        print("Error : one or more value is incorrect")
+        sys.exit(84)
+
+def calcVariance():
+    pSize = int(sys.argv[1])
+    sSize = int(sys.argv[2])
+    voting = float(sys.argv[3]) / 100
+    var = ((voting * (1 - voting)) / pSize) * ((pSize - sSize) / (pSize - 1))
+    return var
+
+def clamp(x):
+    return min(max(x, 0), 1)
+
+def calcInterval(x, i):
+    return (100 * clamp(x - i), 100 * clamp(x + i))
+
+def display():
+    print("Population size:\t", sys.argv[1])
+    print("Sample size:\t\t", sys.argv[2])
+    print("Voting intentions:\t ", end="")
+    print("%.2f" % float(sys.argv[3]), "%", sep="")
+    print("Variance:\t\t ", format(calcVariance(), ".6f"))
+    print("95% confidence interval: ", calcInterval(float(sys.argv[3]), 1.96 * sqrt(calcVariance())))
+    print("99% confidence interval: ", calcInterval(float(sys.argv[3]), 2.58 * sqrt(calcVariance())))
+
+def main():
+    display()
+    return 0
+
+if __name__ == "__main__":
+    errorHandling()
+    main()

@@ -1,0 +1,11 @@
+{
+    "sprite": "Henric_PNJ.png",
+    "default_animation": "",
+    "animations": [],
+    "hitboxes": [
+        {
+            "type": "HITBOX_WALL",
+            "rect": [0.0, 0.5, 1.0, 0.5]
+        }
+    ]
+}

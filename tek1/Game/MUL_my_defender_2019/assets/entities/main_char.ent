@@ -1,0 +1,20 @@
+{
+    "sprite": "RPG_character.png",
+    "default_animation": "idle_down",
+    "animations": {
+        "walk_down": "player/walk_down.anim",
+        "walk_left": "player/walk_left.anim",
+        "walk_right": "player/walk_right.anim",
+        "walk_up": "player/walk_up.anim",
+        "idle_down": "player/idle_down.anim",
+        "idle_left": "player/idle_left.anim",
+        "idle_right": "player/idle_right.anim",
+        "idle_up": "player/idle_up.anim"
+    },
+    "hitboxes": [
+        {
+            "type": "HITBOX_PLAYER",
+            "rect": [0.0, 0.75, 0.9, 0.25]
+        }
+    ]
+}

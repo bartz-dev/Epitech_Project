@@ -1,0 +1,34 @@
+{
+    "layers": [
+        {
+            "tileset": "pause_menu.tileset",
+            "scroll_speed": [1.0, 1.0],
+            "terrain": [
+                [0, 1]
+            ]
+        }
+    ],
+    "entities": [
+        {
+            "file": "exit_button.ent",
+            "name": "exit_button",
+            "pos": [325.0 , 275.0],
+            "persistant": 0,
+            "dialogues": []
+        },
+        {
+            "file": "main_menu_button.ent",
+            "name": "main_menu_button",
+            "pos": [325.0, 450.0],
+            "persistant": 0,
+            "dialogues": []
+        },
+        {
+            "file": "resume_button.ent",
+            "name": "resume_button",
+            "pos": [325.0, 100.0],
+            "persistant": 0,
+            "dialogues": []
+        }
+    ]
+}

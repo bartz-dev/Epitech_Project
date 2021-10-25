@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+##
+## EPITECH PROJECT, 2020
+## B-MAT-400-LYN-4-1-201yams-arthur1.perrot
+## File description:
+## main.py
+##
+
+import sys
+from yams import *
+
+combination = ["pair", "three", "four", "full", "straight", "yams"]
+
+def printHelp():
+    print("USAGE\n    ./201yams d1 d2 d3 d4 d5 c\n\nDESCRIPTION")
+    print("    d1     value of the first die (0 if not thrown)")
+    print("    d2     value of the second die (0 if not thrown)")
+    print("    d3     value of the third die (0 if not thrown)")
+    print("    d4     value of the fourth die (0 if not thrown)")
+    print("    d5     value of the fifth die (0 if not thrown)")
+    print("    c      expected combination")
+    sys.exit(0)
+
+def errorHandling():
+    count = 0
+    if (len(sys.argv) <= 6) or sys.argv[6][0:sys.argv[6].find('_')] not in combination:
+        print("Error : wrong argument")
+        sys.exit(84)
+    for char in sys.argv[6]:
+        if (char.isdecimal()):
+            count += 1
+    if count == 0:
+        print("Error : Wrong Argument")
+        sys.exit(84)
+    for i in range(1, len(sys.argv) - 1):
+        try:
+            int(sys.argv[i])
+        except ValueError:
+            print("Error : Argument must be between 0 and 6")
+            sys.exit(84)
+        if int(sys.argv[i]) > 6 or int(sys.argv[i]) < 0:
+            print("Error : number must be between 0 and 6.")
+            sys.exit(84)
+
+def main():
+    value = [0, 0, 0, 0, 0]
+    if (len(sys.argv) != 2) and (len(sys.argv) != 7):
+        sys.exit(84)
+    if sys.argv[1] == "-h":
+        printHelp()
+    errorHandling()
+    for i in range (0 ,len(sys.argv) - 2):
+        value[i] = int(sys.argv[i + 1])
+    toExec = sys.argv[6][0:sys.argv[6].find("_")]
+    nbr = sys.argv[6][sys.argv[6].find("_") + 1:len(sys.argv[6])]
+    eval(toExec + '(value, nbr)')
+
+if __name__ == "__main__":
+    main()

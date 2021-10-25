@@ -1,0 +1,11 @@
+{
+    "default": "lose",
+    "lose": {
+        "lines": [
+            {
+                "name": "Breton",
+                "text": "Non mais c'etait la manette aussi..."
+            }
+        ]
+    }
+}

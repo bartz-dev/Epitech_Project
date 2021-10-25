@@ -1,0 +1,52 @@
+/*
+** EPITECH PROJECT, 2020
+** findword
+** File description:
+** 
+*/
+
+#include "my.h"
+
+typedef struct var {
+    int pos2;
+    int pos;
+    
+} var_t;
+
+int findword_scd(char *word, int size, char *arg)
+{
+    if (word[pos2] == arg[pos+size]) {
+        pos += size;
+        pos2++;
+        printf("ok3");
+    }
+    if (
+}
+
+int findword(char *word, int size, char *arg)
+{
+    int pos = 0;
+    int pos2 = 0;
+    int count = my_strlen(word);
+    int i = 1;
+
+    while (arg[pos] != word[pos2])
+        pos++;
+    pos2++;
+    while (i != count) {
+        if (word[pos2] == arg[pos--]) { arg[pos--] -= 32;
+            pos2++;
+            printf("ok1");
+        }
+        if (word[pos2] == arg[pos++]) { arg[pos++] -= 32; 
+            pos2++;
+            printf("ok2");
+        }
+        if (word[pos2] == arg[pos+size]) {
+            pos += size;
+            pos2++;
+            printf("ok3");
+        }
+        i++;
+    }
+}

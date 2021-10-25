@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+##
+## EPITECH PROJECT, 2019
+## 109titration_2019
+## File description:
+## 109titration
+##
+
+from os import path
+from arguments import *
+from utils import *
+import sys
+import csv
+
+def open_file():
+    a = []
+    try:
+        with open(sys.argv[1], 'r') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                a.append(', '.join(row))
+            file.close()
+            return a
+    except FileNotFoundError:
+        print('File does not exist')
+        sys.exit(84)
+
+def main():
+    if "-h" in sys.argv or "--help" in sys.argv:
+        print("USAGE\n    ./109titration file\n\nDESCRIPTION")
+        print("    file    a csv file containing “vol;ph” lines")
+        sys.exit(0)
+    if len(sys.argv) == 1 or len(sys.argv) > 2:
+        exit(84)
+    list = open_file()
+    if errorhandling(list) == 84 or len(list) == 0:
+        print("error not enought/too many arguments please check yout value !")
+        exit(84)
+    ph = preparelist(list)
+    print("Derivative:")
+    ph2 = calculate(list, ph, len(list) - 1)
+    print("\nSecond derivative:")
+    ph2.pop(0)
+    list.pop(0)
+    ph = calculate(list, ph2, len(list) -2)
+    calculateestimate(list, ph, ph2, len(list) - 2)
+
+if __name__ == '__main__':
+    main()

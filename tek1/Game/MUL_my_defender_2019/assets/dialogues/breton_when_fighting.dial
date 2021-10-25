@@ -1,0 +1,12 @@
+{
+    "default": "fight",
+    "fight": {
+        "lines": [
+            {
+                "name": "Breton",
+                "text": "PAR LE POUVOIR DE LA SMAGORA, O DIEU D'IKEA, J'INVOQUE LA PUISSANCE
+DE L'ETAGERE FJALLBO"
+            }
+        ]
+    }
+}

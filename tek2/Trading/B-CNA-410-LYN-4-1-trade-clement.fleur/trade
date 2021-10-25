@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+##
+## EPITECH PROJECT, 2020
+## B-CNA-410-LYN-4-1-trade-clement.fleur
+## File description:
+## main.py
+##
+
+from bot import Bot
+
+def main():
+    bot = Bot()
+    bot.run()
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+##
+## EPITECH PROJECT, 2020
+## B-MAT-400-LYN-4-1-203hotline-arthur1.perrot
+## File description:
+## 203hotline
+##
+
+import sys
+import math
+from utils import binomial, binomial_coef, poisson
+
+def printHelp():
+    print("USAGE\n    ./203hotline [n k | d]\n\nDESCRIPTION")
+    print("    n\t    n value for the computation of C(n, k)")
+    print("    k\t    k value for the computation of C(n, k)")
+    print("    d      average duration of calls (in seconds)")
+    sys.exit(0)
+
+def errorHandling():
+    if (len(sys.argv) <= 1 or len(sys.argv) > 3):
+        print("Error must have more than one arguments and less than 2")
+        sys.exit(84)
+    if (len(sys.argv) == 3 and (sys.argv[1].isdecimal() == False or sys.argv[2].isdecimal() == False)):
+        print("Error arguments must be decimal value !")
+        sys.exit(84)
+    if (len(sys.argv) == 2 and (sys.argv[1].isdecimal() == False)):
+        print("Error : must provide decimal number for average duration of calls.")
+        sys.exit(84)
+    if sys.argv[1] == "-h":
+        printHelp()
+    if (len(sys.argv) == 3 and int(sys.argv[1]) < int(sys.argv[2])):
+        print("Error first argument must be greater than second !")
+        sys.exit(84)
+
+def main():
+    errorHandling()
+
+    if (len(sys.argv) == 3):
+        print( "%d-combinations of a set of size %d:\n%d" % (int(sys.argv[2]), int(sys.argv[1]), binomial_coef(int(sys.argv[1]), int(sys.argv[2]))))
+    elif (len(sys.argv) == 2):
+        print("Binomial distribution:")
+        binomial(int(sys.argv[1]))
+        print("Poisson distribution:")
+        poisson(int(sys.argv[1]))
+
+
+if __name__ == "__main__":
+    main()

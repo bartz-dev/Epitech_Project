@@ -1,0 +1,24 @@
+{
+    "default": "part1",
+    "part1": {
+        "lines": [
+            {
+                "name": "Henric",
+                "text": "Merci! Un peu plus et il avait un 4eme mandat.",
+                "choices": []
+            }
+        ],
+        "quests": [],
+        "rewards": [
+            {
+                "type": "xp",
+                "value": 100
+            },
+            {
+                "type": "item",
+                "item": "itemwood",
+                "value": 5
+            }
+        ]
+    }
+}

@@ -1,0 +1,6 @@
+*.o
+a.out
+settings.json
+.vscode/*
+__pycache__
+values.csv

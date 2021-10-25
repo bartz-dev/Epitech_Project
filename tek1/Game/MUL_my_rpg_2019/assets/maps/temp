@@ -1,0 +1,28 @@
+    "entities": [
+        {
+            "file": "breton.ent",
+            "name": "npc",
+            "pos": [620.0, 300.0],
+            "persistant": 0,
+            "dialogues": [
+                {
+                    "conditions": [
+                        {
+                            "type": "quest",
+                            "quest": "none"
+                        }
+                    ],
+                    "file": "breton_talk.dial"
+                },
+                {
+                    "conditions": [
+                        {
+                            "type": "quest",
+                            "quest": "killbreton.quest:kill"
+                        }
+                    ],
+                    "file": "breton_fight.dial"
+                }
+            ]
+        }
+    ]

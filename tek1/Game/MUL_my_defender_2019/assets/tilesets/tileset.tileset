@@ -1,0 +1,15 @@
+{
+    "file": "tileset.png",
+    "size": [7, 8],
+    "hitboxes": [
+        {
+            "tile": 1,
+            "boxes": [
+                {
+                    "type": "HITBOX_WALL",
+                    "rect": [0.0, 0.0, 1.0, 1.0]
+                }
+            ]
+        }
+    ]
+}

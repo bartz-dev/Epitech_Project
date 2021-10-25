@@ -1,0 +1,5 @@
+*.o
+a.out
+settings.json
+.vscode/*
+__pycache__/*

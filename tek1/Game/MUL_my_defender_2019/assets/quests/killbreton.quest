@@ -1,0 +1,37 @@
+{
+    "name": "Anti-IKEA",
+    "redeem_to": "npc_henric",
+    "objectives": [
+        {
+            "name": "kill",
+            "instruction": "Tuer Breton.",
+            "type": "QUEST_KILL",
+            "target": "enemy_breton",
+            "nb_required": 1,
+            "rewards": [
+                {
+                    "type": "xp",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "redeem",
+            "instruction": "Parler a Henric",
+            "type": "QUEST_TALK",
+            "target": "npc_henric",
+            "nb_required": 1
+        }
+    ],
+    "rewards": [
+        {
+            "type": "xp",
+            "value": 100
+        },
+        {
+            "type": "item",
+            "item": "itemwood",
+            "value": 5
+        }
+    ]
+}

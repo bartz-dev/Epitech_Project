@@ -1,0 +1,53 @@
+{
+    "default": "turn",
+    "turn": {
+        "lines": [
+            {
+                "name": "A votre tour!",
+                "text": "Que voulez-vous faire?",
+                "choices": [
+                    {
+                        "text": "Poing surpuissant",
+                        "goto": "combat_choice_1"
+                    },
+                    {
+                        "text": "Jeu mental",
+                        "goto": "combat_choice_2"
+                    },
+                    {
+                        "text": "Poudre aux yeux",
+                        "goto": "combat_choice_3"
+                    }
+                ]
+            }
+        ]
+    },
+    "combat_choice_1": {
+        "lines": [
+            {
+                "name": "",
+                "text": "Votre entrainement vous permet d'infliger des degats physiques consequents
+sur votre adversaire"
+            }
+        ]
+    },
+    "combat_choice_2": {
+        "lines": [
+            {
+                "name": "",
+                "text": "Vous utilisez la psychologie inverse vous permettant d'infliger de gros degats au
+moral de l'ennemi.
+Il n'est plus concentre et sa defense est moins efficace"
+            }
+        ]
+    },
+    "combat_choice_3": {
+        "lines": [
+            {
+                "name": "",
+                "text": "Vous ciblez les yeux de votre adversaire avec votre poudre aveuglante, ses
+mouvements sont moins precis et votre defense augmente"
+            }
+        ]
+    }
+}

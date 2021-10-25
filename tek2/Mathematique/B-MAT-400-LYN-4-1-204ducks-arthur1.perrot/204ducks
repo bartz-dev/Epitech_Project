@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+##
+## EPITECH PROJECT, 2020
+## B-MAT-400-LYN-4-1-204ducks-arthur1.perrot [WSL: Debian]
+## File description:
+## 204ducks
+##
+
+import sys
+
+def printHelp():
+    print("USAGE\n\t./204ducks a\n\nDESCRIPTION\n\ta\tconstant")
+    sys.exit(0)
+
+def errorHandling():
+    if (len(sys.argv) != 2):
+        print("Error : only two arguments allowed")
+        sys.exit(84)
+    if sys.argv[1] == "-h":
+        printHelp()
+    try:
+        float(sys.argv[1])
+    except ValueError:
+        print("Error : not a number")
+        sys.exit(84)
+    if (float(sys.argv[1]) < 0):
+        print("Error : not a valid number")
+        sys.exit(84)
+
+def display():
+    print("Average return time: ")
+    print("Standard deviation: ")
+    print("Time after which 50% of the ducks are back:")
+    print("Time after which 90% of the ducks are back:")
+    print("Percentage of ducks back after 1 minute:")
+    print("Percentage of ducks back after 2 minutes:")
+
+def main():
+    errorHandling()
+    display()
+
+if __name__ == "__main__":
+    main()

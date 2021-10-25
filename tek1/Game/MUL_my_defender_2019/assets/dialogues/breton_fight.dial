@@ -1,0 +1,16 @@
+{
+    "default": "fight",
+    "fight": {
+        "lines": [
+            {
+                "name": "Breton",
+                "text": "MAIS C'EST QUOI TON SOUCI A ME BOUSCULER HEIN?
+TU VEUX QU'ON SE BATTE OU QUOI !?"
+            },
+            {
+                "name": "Breton",
+                "text": "ALLER! Toi contre moi. Dehors. Pas de regles. Tout de suite!"
+            }
+        ]
+    }
+}

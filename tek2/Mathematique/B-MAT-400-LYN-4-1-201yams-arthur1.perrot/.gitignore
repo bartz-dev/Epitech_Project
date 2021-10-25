@@ -1,0 +1,6 @@
+.vscode/
+.out
+.o
+__pycache__/
+*.pyc
+paul.py

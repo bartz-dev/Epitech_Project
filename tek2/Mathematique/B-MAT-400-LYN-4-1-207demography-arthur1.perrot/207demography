@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+##
+## EPITECH PROJECT, 2020
+## B-MAT-400-LYN-4-1-206neutrinos-clement.fleur [WSL: Debian]
+## File description:
+## 203
+##
+
+import sys
+import math
+
+def printHelp():
+    print("USAGE\n    ./207demography code [...]\n\nDESCRIPTION")
+    print("    code\t    country code")
+    sys.exit(0)
+
+def errorHandling():
+    if (len(sys.argv) <= 1):
+        print(len(sys.argv))
+        print("Error : Please check your arguments.")
+        sys.exit(84)
+    if sys.argv[1] == "-h":
+        printHelp()
+
+def main():
+    return 0
+
+
+if __name__ == "__main__":
+    errorHandling()
+    main()

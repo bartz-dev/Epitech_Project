@@ -1,0 +1,6 @@
+*.o
+a.out
+settings.json
+.vscode/*
+__pycache__/*
+207demography_data.csv

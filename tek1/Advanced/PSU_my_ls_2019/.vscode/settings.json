@@ -1,0 +1,11 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.dimInactiveRegions": false,
+    "files.associations": {
+        "ls.h": "c",
+        "time.h": "c",
+        "types.h": "c",
+        "my.h": "c",
+        "dirent.h": "c"
+    }
+}

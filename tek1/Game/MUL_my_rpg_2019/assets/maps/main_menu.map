@@ -1,0 +1,27 @@
+{
+    "layers": [
+        {
+            "tileset": "main_menu.tileset",
+            "scroll_speed": [1.0, 1.0],
+            "terrain": [
+                [0, 1]
+            ]
+        }
+    ],
+    "entities": [
+        {
+            "file": "exit_button.ent",
+            "name": "exit_button",
+            "pos": [325.0 , 300.0],
+            "persistant": 0,
+            "dialogues": []
+        },
+        {
+            "file": "start_button.ent",
+            "name": "start_button",
+            "pos": [325.0, 125.0],
+            "persistant": 0,
+            "dialogues": []
+        }
+    ]
+}

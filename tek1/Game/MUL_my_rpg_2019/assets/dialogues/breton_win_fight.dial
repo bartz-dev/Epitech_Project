@@ -1,0 +1,11 @@
+{
+    "default": "win",
+    "win": {
+        "lines": [
+            {
+                "name": "Breton",
+                "text": "Ha bah tu savais que BUT c'etait pas de la qualité premium suedoise"
+            }
+        ]
+    }
+}

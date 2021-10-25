@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+##
+## EPITECH PROJECT, 2019
+## 103cipher
+## File description:
+## Main
+##
+
+import sys
+import math
+from result import calc
+from result import calc2
+from result import calc3
+from help import help_h
+from calcul import reverse_bytwo
+from calcul import print_matrix
+from sort import sort_message
+from sort import s_message2
+from calcul import matrice
+from invert3 import inversion_matrice
+
+def error(list):
+    if len(list) != 2 and len(list) != 4:
+        sys.exit(84)
+    if len(list) == 2:
+        if list[1] != "-h":
+            sys.exit(84)
+        else:
+            help_h()
+    if len(list) == 4:
+        try:
+            str(list[1])
+            str(list[2])
+        except ValueError:
+            sys.exit(84)
+        if int(list[3]) < 0 or int(list[3]) > 1:
+            sys.exit(84)
+
+
+def main(list):
+    error(list)
+    matrix = matrice(list[2])
+    if list[3] == '1':
+        if len(matrix) == 2:
+            matrix = reverse_bytwo(matrix)
+        elif len(matrix) == 3:
+            matrix = inversion_matrice(matrix)
+        asci = s_message2(list[1], len(matrix))
+        print("\n", "Decrypted message:", sep="")
+        calc2(matrix, asci)
+    else:
+        print_matrix(matrix, len(matrix))
+        asci = sort_message(list[1], len(matrix))
+        print("\n", "Encrypted message:", sep="")
+        calc(matrix, asci)
+    
+
+if __name__ == "__main__":
+    main(sys.argv)

@@ -1,0 +1,17 @@
+{
+    "default": "talk",
+    "talk": {
+        "lines": [
+            {
+                "name": "Breton",
+                "text": "Salut mec !
+Moi c'est Breton."
+            },
+            {
+                "name": "Breton",
+                "text": "Bienvenue au BDE, ici tu pourras t'amuser avec tes potes et profiter de
+ta vie a Epitech"
+            }
+        ]
+    }
+}

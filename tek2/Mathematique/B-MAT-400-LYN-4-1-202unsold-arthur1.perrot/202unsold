@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+##
+## EPITECH PROJECT, 2020
+## B-MAT-400-LYN-4-1-202unsold-arthur1.perrot
+## File description:
+## 202unsold.py
+##
+
+import sys
+from calculator import calculate_result
+
+def printHelp():
+    print("USAGE\n    ./202unsold a b\n\nDESCRIPTION")
+    print("    a\t    constant computed from past results")
+    print("    a\t    constant computed from past results")
+    sys.exit(0)
+
+def errorHanding():
+    if len(sys.argv) != 3:
+        print("Error : 3 arguments needed")
+        sys.exit(84)
+    if (sys.argv[1].isdecimal() == False or sys.argv[2].isdecimal() == False):
+        print("error value must be decimal format.")
+        sys.exit(84)
+    if (int(sys.argv[1]) < 50) or (int(sys.argv[2]) < 50):
+        print("Error : Arguments must be superior to 50")
+        sys.exit(84)
+    if sys.argv[1] == "-h":
+        printHelp()
+
+def main():
+    errorHanding()
+    print('-' * 80)
+    calculate_result(int(sys.argv[1]), int(sys.argv[2]))
+
+if __name__ == "__main__":
+    main()

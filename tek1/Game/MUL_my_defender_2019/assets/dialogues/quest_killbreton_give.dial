@@ -1,0 +1,52 @@
+{
+    "default": "part1",
+    "part1": {
+        "lines": [
+            {
+                "name": "Henric",
+                "text": "Bonjour developpeur!"
+            },
+            {
+                "name": "Henric",
+                "text": "Tu veux une quete?",
+                "choices": [
+                    {
+                        "text": "Oui",
+                        "goto": "ok"
+                    },
+                    {
+                        "text": "Non",
+                        "goto": ""
+                    }
+                ]
+            },
+            {
+                "name": "Henric",
+                "text": "T'es mechant."
+            }
+        ],
+        "quests": [],
+        "rewards": []
+    },
+    "ok": {
+        "lines": [
+            {
+                "name": "Henric",
+                "text": "Merci de bien vouloir m'aider!"
+            },
+            {
+                "name": "Henric",
+                "text": "Laisse moi t'expliquer:
+Ce petit salaud commence a nous couter cher en frites, et son humour est chiant"
+            },
+            {
+                "name": "Henric",
+                "text": "DU coup tu dois buter Breton."
+            }
+        ],
+        "quests": [
+            "killbreton.quest"
+        ],
+        "rewards": []
+    }
+}

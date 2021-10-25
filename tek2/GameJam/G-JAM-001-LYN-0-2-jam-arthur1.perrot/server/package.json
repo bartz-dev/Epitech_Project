@@ -1,0 +1,17 @@
+{
+  "name": "epijam2-server",
+  "version": "1.0.0",
+  "description": "A server for our Epitech Jam 2 project",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "socket.io": "^4.0.0"
+  },
+  "devDependencies": {
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}
